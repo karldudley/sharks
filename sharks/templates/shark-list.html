@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Sharks {% endblock title %}
+{% block heading %} <h1> Sharks </h1>{% endblock heading %}
+{% block content %}
+
+<ul>
+    {% for shark in sharks %}
+        <li><a href="{% url 'sharks-show' id=shark.id %}">{{ shark.name }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
